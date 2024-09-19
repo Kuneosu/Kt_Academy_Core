@@ -21,6 +21,11 @@
     - TypoGraphy 설정
     - Hilt 설정 (hilt,ksp 라이브러리 추가, Application 클래스, AppModule 생성)
     - Navigation 설정 (navigation-compose 라이브러리 추가, NavHost, NavGraph 생성)
+    - OnBoarding 화면 구현
+      - HorizontalPager, PageIndicator를 사용하여 화면 구현
+      - SaveAppEntry, ReadAppEntry를 사용하여 앱 진입 여부 저장
+      - 앱 진입 여부를 판단하여 Navigation 설정
+      - LocalUserManager 구현
 
 ## 목차
 

@@ -5,6 +5,8 @@ sealed class Route(
 ) {
 
     data object ProblemListScreen : Route("problemList")
+    data object OnBoardingScreen : Route("onBoarding")
 
-    data object NavigationScreen : Route("navigation")
+    data object AppStartNavigation : Route("appStartNavigation")
+    data object DefaultNavigation : Route("defaultNavigation")
 }
