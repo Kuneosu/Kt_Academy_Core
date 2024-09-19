@@ -6,15 +6,24 @@
 ### 아직은 기획 및 디자인 단계로 아래의 내용들은 모두 변경될 수 있습니다.
 
 ## 기획 및 디자인
+
 - [기획 페이지 : Notion](https://kimkwonsu.notion.site/20f7b798791a4c12ba5154300704360f?pvs=4)
 - [디자인 페이지 : Figma](https://www.figma.com/design/AHzLjo7ef7NJuJPGPKvBu6/Untitled?node-id=0-1&t=ybsuV1hqabkoKCZc-1)
 
 ## 개발 현황
+
 - 2024.09.13
-  - 프로젝트 생성 및 깃허브 레포지토리 연결
-  - README 작성
+    - 프로젝트 생성 및 깃허브 레포지토리 연결
+    - README 작성
+- 2024.09.14
+    - 스플래시 화면 구현
+    - 프로젝트 패키지 구성
+    - TypoGraphy 설정
+    - Hilt 설정 (hilt,ksp 라이브러리 추가, Application 클래스, AppModule 생성)
+    - Navigation 설정 (navigation-compose 라이브러리 추가, NavHost, NavGraph 생성)
 
 ## 목차
+
 1. [주요 기능](#주요-기능)
 2. [설치 및 실행 방법](#설치-및-실행-방법)
 3. [사용된 기술 스택](#사용된-기술-스택)
@@ -22,7 +31,6 @@
 5. [향후 계획](#향후-계획)
 6. [기여 방법](#기여-방법)
 7. [라이선스](#라이선스)
- 
 
 ## 주요 기능
 
@@ -69,12 +77,29 @@
 ```
 com.kuneosu.kotlinacademycore
 │
-├── di                // 의존성 주입 설정 (Hilt)
-├── model             // 데이터 모델
-├── repository        // 비즈니스 로직 및 데이터 처리
-├── ui                // Composable UI 요소
-├── viewmodel         // ViewModel을 통한 데이터 관리
-└── MainActivity.kt   // 앱의 진입점 및 네비게이션 설정
+├── data                // 데이터 레이어: 로컬 및 원격 데이터 소스, Repository 구현
+│   ├── model           // 데이터 모델 클래스
+│   ├── repository      // Repository 구현체
+│   └── source          // 데이터 소스 (예: Room, SharedPreferences)
+│       ├── local       // 로컬 데이터 소스
+│       └── remote      // 원격 데이터 소스 (필요할 경우)
+│
+├── di                  // 의존성 주입 설정 (Hilt 모듈)
+│   └── AppModule.kt
+│
+├── domain              // 도메인 레이어: UseCase 및 인터페이스
+│   ├── model           // 도메인 모델 (필요할 경우 데이터 모델과 분리)
+│   ├── repository      // Repository 인터페이스
+│   └── usecase         // UseCases
+│
+├── presentation        // 프레젠테이션 레이어: ViewModel, UI, 상태 관리
+│
+├── ui                  // UI 관련: 테마 설정
+│   └── theme           // 테마 관련 설정
+│
+├── util                // 유틸리티 클래스 및 확장 함수
+│
+└── MainActivity.kt     // 앱의 진입점 및 네비게이션 설정
 ```
 
 ## 향후 계획
