@@ -20,6 +20,7 @@
     - 프로젝트 패키지 구성
     - TypoGraphy 설정
     - Hilt 설정 (hilt,ksp 라이브러리 추가, Application 클래스, AppModule 생성)
+    - Navigation 설정 (navigation-compose 라이브러리 추가, NavHost, NavGraph 생성)
 
 ## 목차
 
