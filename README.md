@@ -15,6 +15,8 @@
   - README 작성
 - 2024.09.14
   - 스플래시 화면 구현
+  - 프로젝트 패키지 구성
+  - TypoGraphy 설정
 
 ## 목차
 1. [주요 기능](#주요-기능)
@@ -71,12 +73,29 @@
 ```
 com.kuneosu.kotlinacademycore
 │
-├── di                // 의존성 주입 설정 (Hilt)
-├── model             // 데이터 모델
-├── repository        // 비즈니스 로직 및 데이터 처리
-├── ui                // Composable UI 요소
-├── viewmodel         // ViewModel을 통한 데이터 관리
-└── MainActivity.kt   // 앱의 진입점 및 네비게이션 설정
+├── data                // 데이터 레이어: 로컬 및 원격 데이터 소스, Repository 구현
+│   ├── model           // 데이터 모델 클래스
+│   ├── repository      // Repository 구현체
+│   └── source          // 데이터 소스 (예: Room, SharedPreferences)
+│       ├── local       // 로컬 데이터 소스
+│       └── remote      // 원격 데이터 소스 (필요할 경우)
+│
+├── di                  // 의존성 주입 설정 (Hilt 모듈)
+│   └── AppModule.kt
+│
+├── domain              // 도메인 레이어: UseCase 및 인터페이스
+│   ├── model           // 도메인 모델 (필요할 경우 데이터 모델과 분리)
+│   ├── repository      // Repository 인터페이스
+│   └── usecase         // UseCases
+│
+├── presentation        // 프레젠테이션 레이어: ViewModel, UI, 상태 관리
+│
+├── ui                  // UI 관련: 테마 설정
+│   └── theme           // 테마 관련 설정
+│
+├── util                // 유틸리티 클래스 및 확장 함수
+│
+└── MainActivity.kt     // 앱의 진입점 및 네비게이션 설정
 ```
 
 ## 향후 계획
