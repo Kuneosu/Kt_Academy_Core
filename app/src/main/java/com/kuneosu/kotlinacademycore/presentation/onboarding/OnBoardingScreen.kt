@@ -21,9 +21,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.kuneosu.kotlinacademycore.presentation.Dimens.MediumPadding2
 import com.kuneosu.kotlinacademycore.presentation.Dimens.PageIndicatorWidth
-import com.kuneosu.kotlinacademycore.presentation.onboarding.components.MoveButton
-import com.kuneosu.kotlinacademycore.presentation.onboarding.components.MoveTextButton
+import com.kuneosu.kotlinacademycore.presentation.common.MoveButton
+import com.kuneosu.kotlinacademycore.presentation.common.MoveTextButton
 import com.kuneosu.kotlinacademycore.presentation.onboarding.components.OnBoardingPage
+import com.kuneosu.kotlinacademycore.presentation.onboarding.components.PageIndicator
 import kotlinx.coroutines.launch
 
 @Composable

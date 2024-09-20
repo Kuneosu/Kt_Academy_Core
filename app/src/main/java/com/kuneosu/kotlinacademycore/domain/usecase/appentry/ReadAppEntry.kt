@@ -1,4 +1,4 @@
-package com.kuneosu.kotlinacademycore.domain.usecase
+package com.kuneosu.kotlinacademycore.domain.usecase.appentry
 
 import com.kuneosu.kotlinacademycore.domain.manager.LocalUserManager
 

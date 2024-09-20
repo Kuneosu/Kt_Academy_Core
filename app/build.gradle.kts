@@ -54,6 +54,13 @@ android {
 
 dependencies {
 
+    // Room
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
     // Preference Data Store
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.androidx.datastore.preferences.core)

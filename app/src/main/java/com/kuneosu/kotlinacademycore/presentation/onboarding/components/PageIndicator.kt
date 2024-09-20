@@ -1,4 +1,4 @@
-package com.kuneosu.kotlinacademycore.presentation.onboarding
+package com.kuneosu.kotlinacademycore.presentation.onboarding.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

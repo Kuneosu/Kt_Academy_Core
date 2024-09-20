@@ -15,7 +15,7 @@
 - 2024.09.13
     - 프로젝트 생성 및 깃허브 레포지토리 연결
     - README 작성
-- 2024.09.14
+- 2024.09.19
     - 스플래시 화면 구현
     - 프로젝트 패키지 구성
     - TypoGraphy 설정
@@ -26,6 +26,13 @@
       - SaveAppEntry, ReadAppEntry를 사용하여 앱 진입 여부 저장
       - 앱 진입 여부를 판단하여 Navigation 설정
       - LocalUserManager 구현
+- 2024.09.20
+  - Room 데이터베이스 설정
+    - Room 라이브러리 추가
+    - Entity, Dao 생성
+    - Database 생성
+    - Repository 구현
+    - UseCase 구현
 
 ## 목차
 

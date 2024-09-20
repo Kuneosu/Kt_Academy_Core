@@ -1,4 +1,4 @@
-package com.kuneosu.kotlinacademycore.presentation.onboarding.components
+package com.kuneosu.kotlinacademycore.presentation.common
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button

@@ -3,7 +3,7 @@ package com.kuneosu.kotlinacademycore.presentation.onboarding
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kuneosu.kotlinacademycore.domain.usecase.AppEntryUseCases
+import com.kuneosu.kotlinacademycore.domain.usecase.appentry.AppEntryUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
